@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEEM061</title>
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="p-4">
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Public Key</label>
+        <input readonly type="text" class="form-control" id="publicKey">
+      </div>
+
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Address</label>
+        <input readonly type="text" class="form-control" id="address" aria-describedby="addressLink">
+        <div class="form-text" id="addressLink"></div>
+      </div>
+      
+      <div>
+        <canvas id="canvas"></canvas>
+        <p><a href="#" target="_blank" id="addressAnchor">View on WhatsOnChain</a></p>
+      </div>
+
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Balance</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="balance" aria-describedby="balanceUpdate balanceTime">
+          <button class="btn btn-outline-secondary" id="balanceUpTime" onclick="balanceUpdate()">Update</button>
+        </div>
+        <div class="form-text" id="balanceTime"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Exchange rate</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="exchangeRate" aria-describedby="exchangeRateUpdate exchangeRateTime">
+          <button class="btn btn-outline-secondary" id="exchangeRateUpTime" onclick="exchangeRateUpdate()">Update</button>
+        </div>
+        <div class="form-text" id="exchangeRateTime"></div>
+      </div>
+    </div>
+
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="vendor/nimble.browser.min.js"></script>
+    <script src="vendor/axios.min.js"></script>
+    <script src="vendor/qrcode.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
